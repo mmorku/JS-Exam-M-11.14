@@ -12,7 +12,7 @@ Pastaba: rezultatas turi būti matomas pateikus formą ir atvaizduojamas
 function convertTo(event) {
   const weightInputValue = parseFloat(document.getElementById("search").value);
   const svarai = (weightInputValue * 2.2046).toFixed(1);
-  const gramai = (weightInputValue * 0.001).toFixed(1);
+  const gramai = (weightInputValue / 0.001).toFixed(1);
   const uncijos = (weightInputValue * 35.274).toFixed(1);
   const outputElement = document.getElementById("output");
   if (weightInputValue >= 0) {
