@@ -53,7 +53,7 @@ form {
 }
 
 #output {
-  border: 2px solid;
+  border: 0px solid;
   margin: 100px;
   text-align: left;
   width: 80%;
