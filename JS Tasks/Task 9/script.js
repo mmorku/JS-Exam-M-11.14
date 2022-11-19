@@ -10,15 +10,23 @@ Metodas:
 wasExpensive() - jeigu filmo "budget" yra daugiau nei 100 000 000 mln USD, tada grąžins true, kitu atveju false. 
 ------------------------------------------------------------------------------------------------------ */
 
-function Movie(title, director, budget) {
-  this.title = title;
-  this.director = director;
-  this.budget = budget;
+function Movie() {
+  this.movieDetails = function () {
+    this.title = +prompt("Title?");
+    this.director = +prompt("Director?");
+    this.budget = +prompt("Budet?", 0);
+  };
 
   this.wasExpensive = function () {
-    console.log(this.budget > 100000000);
+    const budgetAmount = parseInt(this.budget, 10);
+    if (budgetAmount > 100000000) {
+      console.log("True");
+    } else {
+      console.log("False");
+    }
   };
 }
-const movie = new Movie("Smile", "Dysney", 150000000);
-console.log(movie);
-console.log(movie.wasExpensive);
+
+let someMovie = new Movie();
+someMovie.movieDetails();
+someMovie.wasExpensive();
