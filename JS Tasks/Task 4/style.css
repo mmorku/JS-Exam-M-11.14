@@ -40,6 +40,7 @@
   background-color: coral;
   padding-bottom: 20px;
   margin: 10px;
+  word-wrap: break-word;
 }
 
 /* Tablet */
