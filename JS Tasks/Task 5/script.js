@@ -20,21 +20,12 @@ const users = [
   { id: "9", name: "Daniel Cane", age: 51, hasDog: true },
 ];
 
-let filterDogOwners = {
-  method: function () {
-    console.log(
-      users.filter((x) => x.hasDog == true).map((users) => users.name)
-    );
-  },
-};
-filterDogOwners.method();
+function filterDogOwners() {
+  return users.filter((user) => user.hasDog == true).map((users) => users.name);
+}
+console.log(filterDogOwners());
 
-let filterAdults = {
-  method: function () {
-    console.log(users.filter((x) => x.age >= 18).map((users) => users.name));
-  },
-};
-filterAdults.method();
-
-// console.log(users.filter((x) => x.hasDog == true).map((users) => users.name));
-// console.log(users.filter((x) => x.age >= 18).map((users) => users.name));
+function filterAdults() {
+  return users.filter((user) => user.age >= 18).map((users) => users.name);
+}
+console.log(filterAdults());

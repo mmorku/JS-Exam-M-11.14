@@ -4,6 +4,8 @@ su tekstu "CLICK ME". Paspaudimų rezultatas turi būti matomas dešinėje
 pusėje esančiame "state" skaičiavimo bloke (<div id="btn__state">0</div>)
 ------------------------------------------------------------------- */
 
+localStorage.clear();
+
 function clickCounter() {
   if (typeof Storage !== "undefined") {
     if (localStorage.clickcount) {

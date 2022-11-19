@@ -33,7 +33,13 @@
   margin-top: 25px;
   padding: 30px;
   border-radius: 5px;
-  background-color: rgb(238, 176, 176);
+  /* background-color: rgb(238, 176, 176); */
+}
+
+#carCard {
+  background-color: coral;
+  padding-bottom: 20px;
+  margin: 10px;
 }
 
 /* Tablet */

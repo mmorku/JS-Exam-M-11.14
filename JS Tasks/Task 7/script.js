@@ -13,3 +13,6 @@ const audi = {
 
 const propertiesNames = Object.keys(audi);
 console.log(propertiesNames);
+
+// ar kosnole skaitosi masyvas?
+// 6,7, sudet i funkcijas

@@ -21,6 +21,9 @@ function Calculator() {
   this.mul = function () {
     return this.a * this.b;
   };
+  this.div = function () {
+    return this.a / this.b;
+  };
 }
 
 let calculator = new Calculator();
@@ -29,3 +32,4 @@ calculator.read();
 alert("Sum=" + calculator.sum());
 alert("Substraction=" + calculator.sub());
 alert("Multiplication=" + calculator.mul());
+alert("Division=" + calculator.div());

@@ -14,22 +14,11 @@ function Movie(title, director, budget) {
   this.title = title;
   this.director = director;
   this.budget = budget;
-}
-const movie = new Movie("Smile");
 
-class Movie2 {
-  constructor(name) {
-    this.name = name;
-  }
+  this.wasExpensive = function () {
+    console.log(this.budget > 100000000);
+  };
 }
-const movieClass = new Movie2("Smile2");
-
-function vienaFunkcija() {
-  // kazka
-}
-
-function antraFunkcija(funkcion3) {
-  funkcion3();
-}
-
-antraFunkcija(vienaFunkcija());
+const movie = new Movie("Smile", "Dysney", 150000000);
+console.log(movie);
+console.log(movie.wasExpensive);
