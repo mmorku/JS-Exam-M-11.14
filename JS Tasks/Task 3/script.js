@@ -19,15 +19,15 @@ function fetchUsers(event) {
       // console.log(response);
       return response.json();
     })
-    .then((result) => {
+    .then((users) => {
       // console.log(result);
-      result.forEach((user) => {
-        const markup = `<ol>${
+      users.forEach((user) => {
+        const userDetails = `<ol>${
           "Login: " + user.login + " " + "Avatar: " + user.avatar_url
         }</ol>`;
         document
           .getElementById("output")
-          .insertAdjacentHTML("beforeend", markup);
+          .insertAdjacentHTML("beforeend", userDetails);
         document.getElementById("message").style.display = "none";
         document.getElementById("output").style.color = "lightblue";
       });

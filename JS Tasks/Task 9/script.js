@@ -11,22 +11,18 @@ wasExpensive() - jeigu filmo "budget" yra daugiau nei 100 000 000 mln USD, tada 
 ------------------------------------------------------------------------------------------------------ */
 
 function Movie() {
-  this.movieDetails = function () {
+  this.setMovieDetails = function () {
     this.title = +prompt("Title?");
     this.director = +prompt("Director?");
-    this.budget = +prompt("Budet?", 0);
+    this.budget = +prompt("Budget?", 0);
   };
 
   this.wasExpensive = function () {
     const budgetAmount = parseInt(this.budget, 10);
-    if (budgetAmount > 100000000) {
-      console.log("True");
-    } else {
-      console.log("False");
-    }
+    return budgetAmount > 100000000;
   };
 }
 
 let someMovie = new Movie();
-someMovie.movieDetails();
-someMovie.wasExpensive();
+someMovie.setMovieDetails();
+console.log(someMovie.wasExpensive());
