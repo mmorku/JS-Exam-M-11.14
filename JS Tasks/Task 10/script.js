@@ -2,25 +2,18 @@
 Sutvarkykite užduoties "Task 10" esančius failus taip, kad veiktų žemiau pateiktos funkcijos.
 -------------------------------------------------------------------------------------------- */
 
-// import { one, two, three, four, five } from "./numbers";
+// import { name } from "./modules/math/composition.js";
+import { composition } from "./modules/math/composition.js";
+import { division } from "./modules/math/division.js";
+import { subtraction } from "./modules/math/subtraction.js";
+import { multiplication } from "./modules/math/multiplication.js";
 
-import {
-  composition,
-  division,
-  substraction,
-  multiplication,
-} from "./modules/math";
-
-let one = 1;
-let two = 2;
-let three = 3;
-let four = 4;
-let five = 5;
+import { one, two, three, four, five } from "./modules/numbers/numbers.js";
 
 let a = composition(one, four);
 let b = division(four, two);
-let c = $(substraction(three, two));
-let d = $(multiplication(five, two));
+let c = subtraction(three, two);
+let d = multiplication(five, two);
 
 console.log(a);
 console.log(b);
