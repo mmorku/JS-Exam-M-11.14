@@ -35,6 +35,4 @@ function fetchProperties() {
     });
 }
 
-// reikia sudeti markup i atskirus DIV
-
 fetchProperties();

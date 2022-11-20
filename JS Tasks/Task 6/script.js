@@ -20,29 +20,12 @@ const users = [
   { id: "9", name: "Daniel Cane", age: 51 },
 ];
 
-// getUserAverageAge
-// getUsersNames
+function getAverageAge(users) {
+  return users.reduce((prev, user) => prev + user.age, 0) / users.length;
+}
+console.log(getAverageAge(users));
 
-let getUserAverageAge = (arr) => {
-  let reducer = (total, currentValue) => total + currentValue;
-  let sum = arr.reduce(reducer);
-  return sum / arr.length;
-};
-
-let ages = users.map((person) => person.age);
-
-console.log(getUserAverageAge(ages));
-
-let nameArray = users.map(function (el) {
-  return el.name;
-});
-document.getElementById("out").innerHTML = JSON.stringify(nameArray, null, 4);
-console.log(nameArray);
-
-var a = [];
-users.forEach(function (users) {
-  a.push(users.name);
-});
-console.log(a);
-
-// kuri geriau?
+function nameList() {
+  return users.map((el) => el.name);
+}
+console.log(nameList());
