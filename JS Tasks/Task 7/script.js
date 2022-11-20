@@ -11,7 +11,7 @@ const audi = {
   color: "white",
 };
 
-function propertiesNames() {
-  return Object.values(audi);
+function getProperyNames() {
+  return Object.keys(audi);
 }
-console.log(propertiesNames());
+console.log(getProperyNames());

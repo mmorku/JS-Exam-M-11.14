@@ -12,19 +12,18 @@ būti stilizuota su CSS ir būti responsive;
 
 function fetchProperties() {
   fetch("./cars.json")
-    .then((res) => {
-      if (res.ok) {
-        return res.json();
+    .then((response) => {
+      if (response.ok) {
+        return response.json();
       } else {
-        throw new Error(res.statusText);
+        throw new Error(response.statusText);
       }
     })
-    .then((data) => {
-      //   console.error(data);
-      data.forEach((data) => {
+    .then((cars) => {
+      cars.forEach((car) => {
         const markup = `<div id="carCard"> <ol>${
-          "Brand: " + data.brand + " "
-        }</ol> <ol>${"Model: " + data.models + " "}</ol> </div>`;
+          "Brand: " + car.brand + " "
+        }</ol> <ol>${"Model: " + car.models + " "}</ol> </div>`;
         document
           .getElementById("output")
           .insertAdjacentHTML("beforeend", markup);

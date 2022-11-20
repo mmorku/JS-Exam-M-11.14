@@ -26,6 +26,6 @@ function getAverageAge(users) {
 console.log(getAverageAge(users));
 
 function nameList() {
-  return users.map((el) => el.name);
+  return users.map((user) => user.name);
 }
 console.log(nameList());

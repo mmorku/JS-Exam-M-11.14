@@ -26,7 +26,7 @@ function convertTo(event) {
       "Uncijos: " +
       uncijos;
   } else {
-    outputElement.innerText = "nieko";
+    outputElement.innerText = "Neįvestas svoris";
   }
   event.preventDefault();
 }

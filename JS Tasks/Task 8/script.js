@@ -7,9 +7,9 @@ division(a, b) - priima du skaičius ir grąžina jų dalybos rezultatą;
 ------------------------------------------------------------------------------------ */
 
 function Calculator() {
-  this.read = function () {
-    this.a = +prompt("a?", 0);
-    this.b = +prompt("b?", 0);
+  this.setValues = function () {
+    this.a = +prompt("First value?", 0);
+    this.b = +prompt("Second value?", 0);
   };
 
   this.sum = function () {
@@ -27,7 +27,7 @@ function Calculator() {
 }
 
 let calculator = new Calculator();
-calculator.read();
+calculator.setValues();
 
 alert("Sum=" + calculator.sum());
 alert("Substraction=" + calculator.sub());
